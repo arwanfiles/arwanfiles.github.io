@@ -11,7 +11,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #ffffff;
+    color: #f7fd35;
 }
 a:hover {
     text-decoration: underline;
@@ -47,7 +47,7 @@ a:hover {
     overflow-y: auto;
 }
 .chat-list > li {
-    display: block;
+    display: none;
     color: #e6f1ff;;
     margin-bottom: 10px;
     font-size: 14px;
@@ -61,11 +61,29 @@ a:hover {
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.05);
     -webkit-box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.05);
 }
+.chat-list > li > span strong, .chat-list > li > span em {
+    color: #46ff00;
+}
 .chat-list > li:nth-child(2n) {
     margin-bottom: 15px;
 }
 .chat-list > li:nth-child(2n) > span {
     border-radius: 0px 10px 10px 10px;
+}
+
+.chat-list > li.loading {
+    background-image: url('../img/ellipsis.svg');
+    background-repeat: no-repeat;
+    height: 40px;
+    background-position-y: -10px;
+    display: block;
+}
+.chat-list > li.loading > span {
+    display: none;
+}
+
+.chat-list > li.sent {
+    display: block;
 }
 
 .send-chat {

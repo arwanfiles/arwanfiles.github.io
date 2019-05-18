@@ -43,6 +43,8 @@ a:hover {
     padding: 20px 30px;
     margin: 0;
     list-style: none;
+    height: calc(100vh - 68px);
+    overflow-y: auto;
 }
 .chat-list > li {
     display: block;

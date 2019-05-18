@@ -12,17 +12,52 @@
     <meta name="description" content="Hi, My name is Arwani. To find further information about me, just type 'arwanfiles' on your favourite search engine. :)" />
     <meta name="keywords" content="arwani, arwanfiles, frontend engineer, frontend developer, web designer" />
 
+    <link rel="icon" type="image/png" href="img/me.png" />
+
     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
 </head>
 
 <body>
-    <div id="container" class="shadow">
-        <canvas id="mainCanvas"></canvas>
+    <div class="container">
+        <div class="left-side">
+            <canvas id="mainCanvas" class="canvas"></canvas>
+        </div>
+
+        <div class="right-side">
+            <ul class="chat-list">
+                <li>
+                    <span>Hi, I'm <strong>Arwani</strong></span>
+                </li>
+                <li>
+                    <span>Frontend developer</span>
+                </li>
+                <li>
+                    <span>For further information about me, just type 'arwanfiles' on your favourite search engine</span>
+                </li>
+                <li>
+                    <span>I'm available for your project</span>
+                </li>
+                <li>
+                    <span>Just contact <a href="mailto:arwanfiles@gmail.com">arwanfiles@gmail.com</a> to hire me</span>
+                </li>
+                <li>
+                    <span>also, you can follow me at <a href="https://www.instagram.com/arwanfiles/" target="_blank">instagram</a>, <a href="https://www.facebook.com/arwanfiles" target="_blank">facebook</a>, <a href="https://www.linkedin.com/in/arwanfiles" target="_blank">linkedin</a> or <a href="https://github.com/arwanfiles" target="_blank">github</a></span>
+                </li>
+            </ul>
+            <form id="openChat" class="send-chat">
+                <div class="send-chat-inner">
+                    <input class="text-input" type="text" placeholder="Type a message" />
+                    <button class="send-button" type="submit">Send</button>
+                </div>
+            </form>
+        </div>
     </div>
+
     <script src="js/proton.min.js"></script>
     <script src="js/PxLoader.js"></script>
     <script src="js/PxLoaderImage.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/chat.js"></script>
 </body>
 
 </html>

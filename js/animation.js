@@ -14,7 +14,7 @@ main();
 function main() {
 
     canvas = document.getElementById("mainCanvas");
-    canvas.width = window.innerWidth;
+    canvas.width = canvas.offsetWidth;
     canvas.height = window.innerHeight;
     context = canvas.getContext('2d');
     imageDatas = [];

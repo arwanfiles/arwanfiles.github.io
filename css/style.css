@@ -11,7 +11,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #1984ff;
+    color: #ffffff;
 }
 a:hover {
     text-decoration: underline;
@@ -21,7 +21,7 @@ a:hover {
     display: flex;
     float: nowrap;
     justify-content: flex-start;
-    widows: 100%;
+    width: 100%;
 }
 
 .left-side {
@@ -46,14 +46,14 @@ a:hover {
 }
 .chat-list > li {
     display: block;
-    color: #464646;
+    color: #e6f1ff;;
     margin-bottom: 10px;
     font-size: 14px;
     line-height: 1.6;
 }
 .chat-list > li > span {
     display: inline-block;
-    background-color: #ffffff;
+    background-color: #1984ff;
     border-radius: 10px 10px 10px 0px;
     padding: 10px 18px;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.05);
@@ -93,8 +93,8 @@ a:hover {
 }
 .send-chat .text-input:focus {
     outline: none;
-    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
 }
 .send-chat .send-button {
     display: inline-block;
@@ -115,4 +115,22 @@ a:hover {
 }
 .send-chat .send-button:focus {
     outline: none;
+}
+
+
+/* Responsive */
+@media only screen and (max-width: 600px) {
+    .container {
+        display: block
+    }
+    
+    .left-side {
+        width: 100%;
+        display: block;
+        height: 100vh;
+    }
+    
+    .right-side {
+        width: 100%;
+    }
 }

@@ -31,7 +31,7 @@ function submitForm(event) {
 }
 
 function generateChat() {
-    var c = document.getElementById("chat").children;
+    var item = document.getElementById("chat").children;
     var i = 0;
     var interval = 1500;
 
@@ -39,10 +39,11 @@ function generateChat() {
         i++;
         var j = i - 1;
 
-        c[j].className = 'loading';
+        item[j].className = 'loading';
         
         setTimeout(function(){
-            c[j].className = 'sent';
+            item[j].className = 'sent';
+            item[j].children[0].className = 'animated flipInX faster';
         }, interval - 300);
 
         if (i === c.length) clearInterval(timer);

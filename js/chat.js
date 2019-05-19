@@ -1,12 +1,32 @@
+var textValue;
+
 window.onload = function() {
     generateChat();
+    checkFormState();
     var form = document.getElementById("openChat");
     form.onsubmit = submitForm.bind(form);
 }
 
+function checkFormState() {
+    var input = document.getElementById("chatTextInput");
+    var button = document.getElementById("chatSendButton");
+
+    input.addEventListener('keyup', function() {
+        if (input.value.charAt(0) === ' ') input.value = null;
+
+        textValue = input.value;
+        if (input.value.length > 0) {
+            button.disabled = false;
+        } else {
+            button.disabled = true;
+        }
+    });
+}
+
 function submitForm(event) {
     event.preventDefault();
-    var text = "Hi Arwani, I'm very interest with your work, do you available right now?"; 
+    var text = "Hi Arwani, I'm very interest with your work, do you available right now?";
+    if (textValue.length > 0) text = textValue;
     window.open('https://wa.me/6281252733330?text=' + encodeURIComponent(text), '_blank');
 }
 

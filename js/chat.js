@@ -25,6 +25,13 @@ function checkFormState() {
 
 function submitForm(event) {
     event.preventDefault();
+
+    gtag('event', 'click', {
+        'event_category': 'contacts',
+        'event_label': 'open_whatsapp_chat',
+        'value': 1
+    });
+
     var text = "Hi Arwani, I'm very interest with your work, do you available right now?";
     if (textValue.length > 0) text = textValue;
     window.open('https://wa.me/6281252733330?text=' + encodeURIComponent(text), '_blank');
@@ -46,6 +53,6 @@ function generateChat() {
             item[j].children[0].className = 'animated flipInX faster';
         }, interval - 300);
 
-        if (i === c.length) clearInterval(timer);
+        if (i === item.length) clearInterval(timer);
     }, interval);
 }
